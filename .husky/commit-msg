@@ -2,6 +2,6 @@
 
 # shellcheck source=./_/husky.sh
 . "$(dirname "$0")/_/husky.sh"
-# 加⼊下⾯这⾏
+# 加⼊下⾯这⾏，否则npx会报命令找不到
 PATH="/usr/local/bin:$PATH"
 npx --no-install commitlint --edit "$1"
