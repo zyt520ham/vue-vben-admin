@@ -14,6 +14,7 @@ module.exports = {
       [
         'feat',
         'fix',
+        'update',
         'perf',
         'style',
         'docs',
