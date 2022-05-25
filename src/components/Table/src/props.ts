@@ -148,4 +148,8 @@ export const basicProps = {
     type: String as PropType<SizeType>,
     default: DEFAULT_SIZE,
   },
+
+  columnHandleResize: {
+    type: Function as PropType<(...payload: any[]) => void>,
+  },
 };

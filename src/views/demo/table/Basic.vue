@@ -1,3 +1,11 @@
+<!--
+ * @Description  : 
+ * @Author       : Zhang Yantao
+ * @Date         : 2022-05-24 23:35:25
+ * @LastEditors  : Zhang Yantao
+ * @LastEditTime : 2022-05-25 11:10:21
+ * @FilePath     : /src/views/demo/table/Basic.vue
+-->
 <template>
   <div class="p-4">
     <BasicTable
@@ -12,6 +20,7 @@
       showTableSetting
       :pagination="pagination"
       @columns-change="handleColumnChange"
+      :columnHandleResize="handleResizeColumn"
     >
       <template #toolbar>
         <a-button type="primary" @click="toggleCanResize">
@@ -61,9 +70,9 @@
       function handleColumnChange(data: ColumnChangeParam[]) {
         console.log('ColumnChanged', data);
       }
-
+      const columns = ref(getBasicColumns());
       return {
-        columns: getBasicColumns(),
+        columns: columns,
         data: getBasicData(),
         canResize,
         loading,
@@ -75,6 +84,15 @@
         toggleBorder,
         pagination,
         handleColumnChange,
+        handleResizeColumn: (w, col) => {
+          console.log('handleResizeColumn', w, col);
+          // col.width = w;
+          columns.value.map((ele) => {
+            if (ele.dataIndex === col.dataIndex) {
+              ele.width = w;
+            }
+          });
+        },
       };
     },
   });

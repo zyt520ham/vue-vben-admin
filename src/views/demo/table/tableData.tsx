@@ -8,6 +8,7 @@ export function getBasicColumns(): BasicColumn[] {
       dataIndex: 'id',
       fixed: 'left',
       width: 200,
+      resizable: true,
     },
     {
       title: '姓名',
@@ -17,10 +18,12 @@ export function getBasicColumns(): BasicColumn[] {
         { text: 'Male', value: 'male' },
         { text: 'Female', value: 'female' },
       ],
+      resizable: true,
     },
     {
       title: '地址',
       dataIndex: 'address',
+      resizable: true,
     },
     {
       title: '编号',
@@ -28,12 +31,14 @@ export function getBasicColumns(): BasicColumn[] {
       width: 150,
       sorter: true,
       defaultHidden: true,
+      resizable: true,
     },
     {
       title: '开始时间',
       width: 150,
       sorter: true,
       dataIndex: 'beginTime',
+      resizable: true,
     },
     {
       title: '结束时间',
