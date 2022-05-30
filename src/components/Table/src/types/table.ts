@@ -135,7 +135,7 @@ export interface TableSetting {
   fullScreen?: boolean;
 }
 
-export interface BasicTableProps<T = any> {
+export interface BasicTableProps<T = any> extends Recordable {
   // 点击行选中
   clickToRowSelect?: boolean;
   isTreeTable?: boolean;

@@ -8,7 +8,7 @@ type Instance = TableActionType & {
   wrapRef: Ref<Nullable<HTMLElement>>;
   getBindValues: ComputedRef<Recordable>;
 };
-
+//Omit 剔除getBindValues，在重新& 上一个新的类型
 type RetInstance = Omit<Instance, 'getBindValues'> & {
   getBindValues: ComputedRef<BasicTableProps>;
 };

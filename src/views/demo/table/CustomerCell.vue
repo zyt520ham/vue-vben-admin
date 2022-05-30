@@ -32,13 +32,13 @@
     {
       title: 'ID',
       dataIndex: 'id',
-      // slots: { customRender: 'id' },
+      slots: { customRender: 'id' },
     },
     {
       title: '头像',
       dataIndex: 'avatar',
       width: 100,
-      // slots: { customRender: 'avatar' },
+      slots: { customRender: 'avatar' },
     },
     {
       title: '分类',
