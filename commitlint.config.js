@@ -12,21 +12,21 @@ module.exports = {
       2,
       'always',
       [
-        'feat',
-        'fix',
+        'feat', //增加新功能
+        'fix', //修复问题/BUG
         'update',
-        'perf',
-        'style',
-        'docs',
-        'test',
-        'refactor',
-        'build',
-        'ci',
-        'chore',
-        'revert',
-        'wip',
-        'workflow',
-        'types',
+        'perf', //代码风格相关无影响运行结果的
+        'style', //优化/性能提升
+        'docs', //重构
+        'test', //撤销修改
+        'refactor', //测试相关
+        'build', //文档/注释
+        'ci', //赖更新/脚手架配置修改等
+        'chore', //workflow 工作流改进
+        'revert', //ci 持续集成
+        'wip', //mod 不确定分类的修改
+        'workflow', //wip 开发中
+        'types', //types 类型修改
         'release',
       ],
     ],

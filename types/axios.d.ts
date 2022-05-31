@@ -39,6 +39,17 @@ export interface Result<T = any> {
   result: T;
 }
 
+export interface Result<T = any> {
+  data: T;
+  retCode: number;
+  retMsg: string;
+}
+
+export interface IReqErr extends Error {
+  retCode?: number;
+  retMsg?: string;
+  respData?: any;
+}
 // multipart/form-data: upload file
 export interface UploadFileParams {
   // Other parameters
