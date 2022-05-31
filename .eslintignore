@@ -13,3 +13,6 @@ dist
 .local
 /bin
 Dockerfile
+study-doc
+DragResizeComp.vue
+thinkingdata.esm.min.js
